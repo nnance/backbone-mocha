@@ -17,10 +17,12 @@ require.config({
 });
 
 require([
+    'jquery',
     'backbone',
     'views/main'
-], function (Backbone, MainView) {
-    var mainView = new MainView({el: '.container'});
+], function ($, Backbone, MainView) {
+    var mainView = new MainView();
     mainView.render();
+    $('body').append(mainView.el);
     Backbone.history.start();
 });
