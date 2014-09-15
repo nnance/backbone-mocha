@@ -14,6 +14,7 @@ require.config({
         underscore: '../bower_components/underscore/underscore',
         bootstrap: '../bower_components/sass-bootstrap/dist/js/bootstrap',
         spec: '.',
+        lib: '/scripts/lib',
         templates: '/scripts/templates',
         views: '/scripts/views'
     }
@@ -21,6 +22,7 @@ require.config({
 
 define(function(require){
 	require('spec/views/main');
+    require('spec/lib/config');
 
     window.mocha.run();
 });
